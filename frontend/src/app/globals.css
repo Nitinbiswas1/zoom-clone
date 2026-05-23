@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Dark Theme Styles and Core Rules */
+@layer base {
+  body {
+    @apply bg-[#161618] text-white antialiased selection:bg-[#0E72ED] selection:text-white;
+  }
+}
+
+/* Premium Sleek Dark Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161618;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D2D30;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3E3E42;
+}
+
+/* Custom interactive animation overlays */
+.animate-scale {
+  animation: scaleUp 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
